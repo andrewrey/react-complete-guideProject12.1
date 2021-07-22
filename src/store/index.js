@@ -1,4 +1,4 @@
-import store from "redux";
+import { createStore } from "redux";
 
 const counterReducer = (state = { counter: 0 }, action) => {
   switch (action.type) {
@@ -11,6 +11,6 @@ const counterReducer = (state = { counter: 0 }, action) => {
   }
 };
 
-const appStore = store.createStore(counterReducer);
+const appStore = createStore(counterReducer);
 
 export default appStore;
