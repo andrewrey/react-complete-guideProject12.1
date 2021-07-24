@@ -9,7 +9,8 @@ function App() {
   return (
     <>
       <Header />
-      {!authState ? <Auth /> : <UserProfile />}
+      {!authState && <Auth />}
+      {authState && <UserProfile />}
       <Counter />
     </>
   );
